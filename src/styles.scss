@@ -1,0 +1,28 @@
+@use '@infragistics/igniteui-angular/theming' as *;
+
+$font-family: 'Roboto, Arial, sans-serif';
+
+$gray: #121212;
+$surface: #fff;
+
+$info: #1377d5;
+$success: #4eb862;
+$warn: #fbb13c;
+$error: #ff134a;
+
+$roundness: 0;
+
+$primary: #045493;
+$secondary: #045493;
+
+@include core();
+
+@include typography($font-family: $font-family);
+
+$palette: palette($primary, $secondary, $surface, $gray, $info, $success, $warn, $error);
+
+:root {
+  @include palette($palette);
+}
+
+@include bootstrap-light-theme($palette, $roundness: $roundness);
